@@ -119,7 +119,6 @@ function App() {
             </ListItem>
           </List>
           <Divider variant="middle" className={classes.iconDivider} />
-          <Divider variant="middle" className={classes.iconDivider} />
           <List className={classes.itemBoxDrawer}>
             <ListItem button>
               <ListItemIcon color="primary">
