@@ -87,8 +87,8 @@ const ConnectModal = () => {
           </div>
           <p className="registration">
             Prin înscriere, ești de acord cu{' '}
-            <Link href="#">termenii noștri de utilizare</Link>
-            și cu <Link href="#">politica de confidențialitate</Link>.
+            <Link href="#">termenii noștri de utilizare </Link>
+            și cu <Link href="#">politica de confidențialitate.</Link>
           </p>
         </Box>
       </Modal>
