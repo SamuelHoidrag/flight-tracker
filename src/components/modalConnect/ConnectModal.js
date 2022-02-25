@@ -44,9 +44,9 @@ const ConnectModal = () => {
           </button>
           <img className="momondoLogo" src={Logo} alt="Logo Momondo" />
           <img className="momondoAuth" src={LogoAuth} alt="Connect" />
-          <h7 className="modalOneStep">
+          <h6 className="modalOneStep">
             Inițiază sesiune sau creează-ți un cont
-          </h7>
+          </h6>
           <p className="modalTextStepOne">
             Urmărește prețurile, organizează-ți planurile de călătorie și
             accesează oferte destinate doar membrilor cu contul tău momondo.

@@ -151,6 +151,7 @@
   width: 100%;
   height: auto;
   font-family: Roboto;
+  justify-content: center;
 }
 select {
   -webkit-appearance: none;
@@ -202,8 +203,24 @@ select::-ms-expand {
   font-weight: 400;
 }
 
-.selectFlightLocation {
-  width: 100%;
-  background-color: rgba(128, 128, 128, 0.404);
-  height: 150px;
+.checkTrackerMain {
+  width: fit-content;
+  display: flex;
+  margin: auto;
+  gap: 10px;
+  justify-content: center;
+  height: auto;
+  background: #0095cc;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+#buttonSearchFlight {
+  background-color: #21033a;
+  border-color: #21033a;
+}
+
+.contentFlightTracker {
+  background-color: #21033a;
+  height: 100vh;
 }

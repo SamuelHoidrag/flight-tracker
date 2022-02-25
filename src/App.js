@@ -51,7 +51,9 @@ function App() {
             <CountryPicker />
           </Toolbar>
         </AppBar>
+        {/* Drawer */}
         <DrawerMenu open={open} handleDrawerClose={handleDrawerClose} />
+        {/* Drawer */}
         <Box className={classes.boxTitleH1} component="main">
           <DrawerHeader />
           <Typography className={classes.mainTitle} variant="h4">
