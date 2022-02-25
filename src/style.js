@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     paddingTop: '100px',
     fontFamily: 'Roboto',
     fontWeight: '700 !important',
+    color: '#ffffff',
   },
   iconDrawer: {
     color: '#ffffff94',
