@@ -2,16 +2,40 @@ import * as React from 'react'
 import { Container } from '@mui/material'
 import { Select, Button, InputNumber, DatePicker, Space } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
-// import { useState } from 'react'
+import { useState } from 'react'
+import Results from '../results/Results'
 
 const { Option } = Select
 
 const FormFlight = () => {
-  // const [data, setData] = useState({})
+  const [carrier, setCarrier] = useState('')
+  const [date, setDate] = useState('')
+  const [flightNum, setFlightNum] = useState('')
+  const [data, setData] = useState({})
+
+  const onChange = (value) => {
+    setCarrier(value)
+  }
+
+  const onChangeDate = (date, dateString) => {
+    setDate(dateString)
+  }
+
+  const onFlightNumChange = (value) => {
+    setFlightNum(value)
+  }
 
   const onSearch = () => {
+    if (!carrier || !flightNum || !date) {
+      alert('Carrier, Flight Numer and Date is Required')
+      return
+    }
+
+    let firstFormat = date.replace('-', '/')
+    let formattedDate = firstFormat.replace('-', '/')
+
     fetch(
-      `https://cors-anyware.herokuapp.com/https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/EY/233/dep/2019/12/01`,
+      `https://cors-anyware.herokuapp.com/https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/${carrier}/${flightNum}/dep/${formattedDate}`,
       {
         method: 'GET',
         headers: {
@@ -22,14 +46,11 @@ const FormFlight = () => {
     )
       .then((data) => data.json())
       .then((finalData) => {
+        setData(finalData)
         console.log(finalData)
-        // setConfirmed(finalData)
       })
   }
 
-  function onFlightNumChange(value) {
-    console.log('changed', value)
-  }
   return (
     <Container>
       <div className="containerForm">
@@ -56,18 +77,23 @@ const FormFlight = () => {
             showSearch
             style={{ width: 200 }}
             placeholder="Select Airline"
+            onChange={onChange}
           >
-            <Option value="EY">Emirates</Option>
-            <Option value="2">Eithid</Option>
-            <Option value="3">Qatar</Option>
+            <Option value="EK">Emirates</Option>
+            <Option value="EY">Eithid</Option>
+            <Option value="QR">Qatar</Option>
           </Select>
         </div>
         <div>
-          <InputNumber placeholder="ex 245" onChange={onFlightNumChange} />
+          <InputNumber
+            min={0}
+            placeholder="ex 245"
+            onChange={onFlightNumChange}
+          />
         </div>
         <div>
           <Space direction="vertical">
-            <DatePicker />
+            <DatePicker onChange={onChangeDate} />
           </Space>
         </div>
         <div>
@@ -81,7 +107,25 @@ const FormFlight = () => {
           </Button>
         </div>
       </div>
-      <div className="contentFlightTracker"></div>
+      <div className="contentFlightTracker">
+        {data.flightStatuses && data.flightStatuses.length > 0 && (
+          <div className="mainBoxFlightDetails">
+            <h2 className="searchResults">Search Result</h2>
+            <Results
+              status={data.flightStatuses[0].status}
+              flightData={data.flightStatuses[0]}
+              airportInfo={data.appendix.airports}
+            />
+          </div>
+        )}
+        {data.flightStatuses && data.flightStatuses.length === 0 && (
+          <div className="mainBoxFlightDetails">
+            <h3 className="searchResults">Search Result</h3>
+            <hr className="deviderLineSearch" />
+            <h2>Sorry no info available!</h2>
+          </div>
+        )}
+      </div>
     </Container>
   )
 }

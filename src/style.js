@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     color: '#ffffff',
   },
   iconDrawer: {
-    color: '#ffffff94',
+    color: '#ffffff',
     marginLeft: '10px',
   },
   drawerHeader: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
   },
   itemBoxDrawer: {
     '&:hover': {
-      backgroundColor: '#ffffff20',
+      backgroundColor: '#ffffff60',
       transition: 'all 0.1s ease-out',
     },
   },
