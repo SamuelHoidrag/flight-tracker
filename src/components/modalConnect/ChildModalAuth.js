@@ -23,6 +23,8 @@ const style = {
 
 const ChildModal = () => {
   const [open, setOpen] = React.useState(false)
+  const [emailError, setEmailError] = useState('')
+
   const handleOpen = () => {
     setOpen(true)
   }
@@ -30,9 +32,8 @@ const ChildModal = () => {
     setOpen(false)
   }
 
-  const [emailError, setEmailError] = useState('')
   const validateEmail = (e) => {
-    var email = e.target.value
+    let email = e.target.value
 
     if (validator.isEmail(email)) {
       setEmailError('Valid Email :)')

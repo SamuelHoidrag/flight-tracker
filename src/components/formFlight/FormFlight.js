@@ -17,7 +17,7 @@ const FormFlight = () => {
     setCarrier(value)
   }
 
-  const onChangeDate = (date, dateString) => {
+  const onChangeDate = (dateString) => {
     setDate(dateString)
   }
 
