@@ -18,6 +18,7 @@ import { useStyles, Drawer, DrawerHeader } from '../../style'
 
 const DrawerMenu = (props) => {
   const classes = useStyles()
+
   const theme = useTheme()
 
   const { handleDrawerClose, open } = props

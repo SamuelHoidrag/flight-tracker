@@ -23,11 +23,13 @@ const style = {
 
 const ChildModal = () => {
   const [open, setOpen] = React.useState(false)
+
   const [emailError, setEmailError] = useState('')
 
   const handleOpen = () => {
     setOpen(true)
   }
+
   const handleClose = () => {
     setOpen(false)
   }

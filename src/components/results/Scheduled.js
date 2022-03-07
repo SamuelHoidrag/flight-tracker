@@ -4,6 +4,7 @@ import moment from 'moment'
 
 export default ({ flightData, airportInfo }) => {
   const { operationalTimes } = flightData
+
   const [arrival, departure] = airportInfo
 
   return (
