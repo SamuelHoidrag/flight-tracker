@@ -11,7 +11,9 @@ import { useStyles } from '../../style'
 
 const ToolbarNav = (props) => {
   const classes = useStyles()
+
   const { handleDrawerOpen, open } = props
+
   return (
     <>
       <Toolbar>

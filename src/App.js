@@ -10,6 +10,7 @@ import ToolbarNav from './components/toolbar/ToolbarNav'
 
 function App() {
   const classes = useStyles()
+
   const [open, setOpen] = React.useState(false)
 
   const handleDrawerOpen = () => {
@@ -19,6 +20,7 @@ function App() {
   const handleDrawerClose = () => {
     setOpen(false)
   }
+
   return (
     <>
       <Box>
@@ -26,9 +28,7 @@ function App() {
         <AppBar className={classes.appBar} position="fixed" open={open}>
           <ToolbarNav handleDrawerOpen={handleDrawerOpen} open={open} />
         </AppBar>
-        {/* Drawer */}
         <DrawerMenu open={open} handleDrawerClose={handleDrawerClose} />
-        {/* Drawer */}
         <Box className={classes.boxTitleH1} component="main">
           <DrawerHeader />
           <Typography className={classes.mainTitle} variant="h4">

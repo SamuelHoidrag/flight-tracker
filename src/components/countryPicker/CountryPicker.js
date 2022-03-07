@@ -7,7 +7,6 @@ const CountryPicker = () => {
       id="countryPikID"
       className="countryPikerInput"
       preferredCountries={['ro', 'ro']}
-      handleChange={(e) => console.log(e.target.value)}
     ></CountryDropdown>
   )
 }
