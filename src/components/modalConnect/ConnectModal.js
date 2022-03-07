@@ -18,11 +18,13 @@ import { useStyles } from '../../style'
 
 const ConnectModal = () => {
   const classes = useStyles()
+
   const [open, setOpen] = React.useState(false)
 
   const handleOpen = () => {
     setOpen(true)
   }
+
   const handleClose = () => {
     setOpen(false)
   }

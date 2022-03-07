@@ -11,6 +11,7 @@ export default (props) => {
 
 const renderBasedOnStatus = (props) => {
   const { status, flightData, airportInfo } = props
+
   switch (status) {
     case 'U':
       return <Unknown flightData={flightData} />
