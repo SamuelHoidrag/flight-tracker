@@ -95,7 +95,7 @@ const useStyles = makeStyles({
   },
 })
 
-const drawerWidth = 240
+const drawerWidth = 210
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
