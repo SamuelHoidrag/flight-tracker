@@ -268,3 +268,22 @@ select::-ms-expand {
 .departureContainer {
   width: 50%;
 }
+
+.error404 {
+  width: 100%;
+  height: 100vh;
+}
+
+.mainContainerCazari {
+  height: 100vh;
+  background-color: #21033a;
+}
+
+.titleCazare {
+  padding-top: 200px;
+  font-family: Roboto;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 700 !important;
+}
