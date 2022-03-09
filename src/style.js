@@ -6,7 +6,7 @@ import MuiAppBar from '@mui/material/AppBar'
 const useStyles = makeStyles({
   mainTitle: {
     textAlign: 'center',
-    paddingTop: '100px',
+    paddingTop: '200px',
     fontFamily: 'Roboto',
     fontWeight: '700 !important',
     color: '#ffffff',
@@ -92,6 +92,11 @@ const useStyles = makeStyles({
     color: 'grey !important',
     fontSize: '11px !important',
     fontWeight: '600 !important',
+  },
+  linkColorDrawer: {
+    color: '#ffffff !important',
+    fontSize: '16px !important',
+    fontWeight: '400 !important',
   },
 })
 

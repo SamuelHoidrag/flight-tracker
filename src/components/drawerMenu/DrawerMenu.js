@@ -8,6 +8,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import ListItem from '@mui/material/ListItem'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
+import { Link } from 'react-router-dom'
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket'
 import LocalHotelIcon from '@mui/icons-material/LocalHotel'
 import DirectionsCarTwoToneIcon from '@mui/icons-material/DirectionsCarTwoTone'
@@ -48,7 +49,10 @@ const DrawerMenu = (props) => {
           <ListItemIcon>
             {<AirplaneTicketIcon className={classes.iconDrawer} />}
           </ListItemIcon>
-          <ListItemText primary={'Bilete avion'} />
+          {/* <ListItemText primary={'Bilete avion'} /> */}
+          <Link className={classes.linkColorDrawer} to="/">
+            {'Bilete avion'}
+          </Link>
         </ListItem>
       </List>
       <List className={classes.itemBoxDrawer}>
@@ -56,7 +60,10 @@ const DrawerMenu = (props) => {
           <ListItemIcon>
             {<LocalHotelIcon className={classes.iconDrawer} />}
           </ListItemIcon>
-          <ListItemText primary={'Cazări'} />
+          {/* <ListItemText primary={'Cazări'} /> */}
+          <Link className={classes.linkColorDrawer} to="/cazari">
+            {'Cazări'}
+          </Link>
         </ListItem>
       </List>
       <List className={classes.itemBoxDrawer}>
@@ -64,7 +71,10 @@ const DrawerMenu = (props) => {
           <ListItemIcon>
             <DirectionsCarTwoToneIcon className={classes.iconDrawer} />
           </ListItemIcon>
-          <ListItemText primary={'Mașini'} />
+          {/* <ListItemText primary={'Mașini'} /> */}
+          <Link className={classes.linkColorDrawer} to="/masini">
+            {'Mașini'}
+          </Link>
         </ListItem>
       </List>
       <Divider variant="middle" className={classes.iconDivider} />
@@ -73,7 +83,10 @@ const DrawerMenu = (props) => {
           <ListItemIcon>
             {<PublicSharpIcon className={classes.iconDrawer} />}
           </ListItemIcon>
-          <ListItemText primary="Explore" />
+          {/* <ListItemText primary="Explore" /> */}
+          <Link className={classes.linkColorDrawer} to="/explore">
+            {'Explore'}
+          </Link>
         </ListItem>
       </List>
       <Divider variant="middle" className={classes.iconDivider} />
@@ -82,7 +95,10 @@ const DrawerMenu = (props) => {
           <ListItemIcon color="primary">
             {<HolidayVillageSharpIcon className={classes.iconDrawer} />}
           </ListItemIcon>
-          <ListItemText primary={'Trips'} />
+          {/* <ListItemText primary={'Trips'} /> */}
+          <Link className={classes.linkColorDrawer} to="/trips">
+            {'Trips'}
+          </Link>
         </ListItem>
       </List>
     </Drawer>
