@@ -2,7 +2,7 @@ import React from 'react'
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
 import Typography from '@mui/material/Typography'
-import Layout from '../components/layout/Layout'
+import Layout from '../components/layoutMain/Layout'
 
 const Masini = () => {
   return (

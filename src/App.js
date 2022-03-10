@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
 import Typography from '@mui/material/Typography'
 import FormFlight from './components/formFlight/FormFlight'
-import Layout from './components/layout/Layout'
+import Layout from './components/layoutMain/Layout'
 import { useStyles } from './style'
 
 function App() {
