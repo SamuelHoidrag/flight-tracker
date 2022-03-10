@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { memo } from 'react'
 import { Container } from '@mui/material'
 import { Select, Button, InputNumber, DatePicker, Space } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
@@ -7,7 +7,7 @@ import Results from '../results/Results'
 
 const { Option } = Select
 
-const FormFlight = () => {
+export default memo(function FormFlight() {
   const [carrier, setCarrier] = useState('')
   const [date, setDate] = useState('')
   const [flightNum, setFlightNum] = useState('')
@@ -128,6 +128,4 @@ const FormFlight = () => {
       </div>
     </Container>
   )
-}
-
-export default FormFlight
+})
