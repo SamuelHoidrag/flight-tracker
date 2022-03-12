@@ -1,6 +1,12 @@
 import * as React from 'react'
-import { useTheme } from '@mui/material/styles'
+import { Link } from 'react-router-dom'
+
+// Material UI
 import List from '@mui/material/List'
+import PersonPinTwoToneIcon from '@mui/icons-material/PersonPinTwoTone'
+import PublicSharpIcon from '@mui/icons-material/PublicSharp'
+import DirectionsCarTwoToneIcon from '@mui/icons-material/DirectionsCarTwoTone'
+import { useTheme } from '@mui/material/styles'
 import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
@@ -8,13 +14,11 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import ListItem from '@mui/material/ListItem'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
-import { Link } from 'react-router-dom'
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket'
 import LocalHotelIcon from '@mui/icons-material/LocalHotel'
-import DirectionsCarTwoToneIcon from '@mui/icons-material/DirectionsCarTwoTone'
-import PublicSharpIcon from '@mui/icons-material/PublicSharp'
 import HolidayVillageSharpIcon from '@mui/icons-material/HolidayVillageSharp'
-import PersonPinTwoToneIcon from '@mui/icons-material/PersonPinTwoTone'
+
+//Components
 import { useStyles, Drawer, DrawerHeader } from '../../style'
 
 const DrawerMenu = (props) => {

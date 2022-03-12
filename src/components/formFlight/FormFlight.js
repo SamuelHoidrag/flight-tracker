@@ -1,4 +1,3 @@
-// React
 import React, { memo, useState } from 'react'
 
 //Materiall UI

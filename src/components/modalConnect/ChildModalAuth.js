@@ -1,10 +1,13 @@
-import React from 'react'
-import { useState } from 'react'
-import validator from 'validator'
+import React, { useState } from 'react'
+
+// Material Ui
 import TextField from '@mui/material/TextField'
 import Modal from '@mui/material/Modal'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
+
+// Components
+import validator from 'validator'
 
 const style = {
   position: 'absolute',

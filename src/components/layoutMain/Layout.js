@@ -1,11 +1,16 @@
 import React from 'react'
-import { useStyles, AppBar } from '../../style'
+
+// Material Ui
 import { Box } from '@mui/system'
+
+// Components
+import { useStyles, AppBar } from '../../style'
 import ToolbarNav from '../toolbar/ToolbarNav'
 import DrawerMenu from '../drawerMenu/DrawerMenu'
 
 const Layout = () => {
   const classes = useStyles()
+
   const [open, setOpen] = React.useState(false)
 
   const handleDrawerOpen = () => {
