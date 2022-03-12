@@ -1,8 +1,16 @@
-import React, { memo } from 'react'
-import { Container } from '@mui/material'
+// React
+import React, { memo, useState } from 'react'
+
+//Materiall UI
+import { Container, Box } from '@mui/material'
+import Typography from '@mui/material/Typography'
+
+// Ant Design
 import { Select, Button, InputNumber, DatePicker, Space } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
-import { useState } from 'react'
+
+// Components
+import { useStyles } from '../../style'
 import Results from '../results/Results'
 
 const { Option } = Select
@@ -12,6 +20,7 @@ export default memo(function FormFlight() {
   const [date, setDate] = useState('')
   const [flightNum, setFlightNum] = useState('')
   const [data, setData] = useState({})
+  const classes = useStyles()
 
   const onChange = (value) => {
     setCarrier(value)
@@ -52,80 +61,67 @@ export default memo(function FormFlight() {
   }
 
   return (
-    <Container>
-      <div className="containerForm">
-        <div className="select">
-          <select>
-            <option value="1">Doar dus</option>
-            <option value="2">Dus-Întors</option>
-            <option value="3">Multi-City</option>
-          </select>
-        </div>
-        <div className="select">
-          <select>
-            <option value="1">Economic</option>
-            <option value="2">Premium Economic</option>
-            <option value="3">Business</option>
-            <option value="4">Clasa întâi</option>
-            <option value="5">Mixte</option>
-          </select>
-        </div>
-      </div>
-      <div className="checkTrackerMain">
-        <div>
-          <Select
-            showSearch
-            style={{ width: 200 }}
-            placeholder="Select Airline"
-            onChange={onChange}
-          >
-            <Option value="EK">Emirates</Option>
-            <Option value="EY">Eithid</Option>
-            <Option value="QR">Qatar</Option>
-          </Select>
-        </div>
-        <div>
-          <InputNumber
-            min={0}
-            placeholder="ex 245"
-            onChange={onFlightNumChange}
-          />
-        </div>
-        <div>
-          <Space direction="vertical">
-            <DatePicker onChange={onChangeDate} />
-          </Space>
-        </div>
-        <div>
-          <Button
-            id="buttonSearchFlight"
-            type="primary"
-            icon={<SearchOutlined />}
-            onClick={onSearch}
-          >
-            Search
-          </Button>
-        </div>
-      </div>
-      <div className="contentFlightTracker">
-        {data.flightStatuses && data.flightStatuses.length > 0 && (
-          <div className="mainBoxFlightDetails">
-            <h2 className="searchResults">Search Result</h2>
-            <Results
-              status={data.flightStatuses[0].status}
-              flightData={data.flightStatuses[0]}
-              airportInfo={data.appendix.airports}
+    <Box className="mainContainer">
+      <Container>
+        <Typography className={classes.mainTitle} variant="h4">
+          Bun venit! Caută un zbor flexibil pentru următoarea ta călătorie.
+        </Typography>
+        <div className="checkTrackerMain">
+          <div>
+            <Select
+              showSearch
+              style={{ width: 200 }}
+              placeholder="Select Airline"
+              onChange={onChange}
+            >
+              <Option value="EK">Emirates</Option>
+              <Option value="EY">Eithid</Option>
+              <Option value="QR">Qatar</Option>
+            </Select>
+          </div>
+          <div>
+            <InputNumber
+              min={0}
+              placeholder="ex 245"
+              onChange={onFlightNumChange}
             />
           </div>
-        )}
-        {data.flightStatuses && data.flightStatuses.length === 0 && (
-          <div className="mainBoxFlightDetails">
-            <h3 className="searchResults">Search Result</h3>
-            <hr className="deviderLineSearch" />
-            <h2>Sorry no info available!</h2>
+          <div>
+            <Space direction="vertical">
+              <DatePicker onChange={onChangeDate} />
+            </Space>
           </div>
-        )}
-      </div>
-    </Container>
+          <div>
+            <Button
+              id="buttonSearchFlight"
+              type="primary"
+              icon={<SearchOutlined />}
+              onClick={onSearch}
+            >
+              Search
+            </Button>
+          </div>
+        </div>
+        <div className="contentFlightTracker">
+          {data.flightStatuses && data.flightStatuses.length > 0 && (
+            <div className="mainBoxFlightDetails">
+              <h2 className="searchResults">Search Result</h2>
+              <Results
+                status={data.flightStatuses[0].status}
+                flightData={data.flightStatuses[0]}
+                airportInfo={data.appendix.airports}
+              />
+            </div>
+          )}
+          {data.flightStatuses && data.flightStatuses.length === 0 && (
+            <div className="mainBoxFlightDetails">
+              <h3 className="searchResults">Search Result</h3>
+              <hr className="deviderLineSearch" />
+              <h2>Sorry no info available!</h2>
+            </div>
+          )}
+        </div>
+      </Container>
+    </Box>
   )
 })

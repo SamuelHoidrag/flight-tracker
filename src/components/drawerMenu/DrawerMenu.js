@@ -44,58 +44,58 @@ const DrawerMenu = (props) => {
         </ListItem>
       </List>
       <Divider variant="middle" className={classes.iconDivider} />
-      <List className={classes.itemBoxDrawer}>
-        <Link className={classes.linkColorDrawer} to="/">
+      <Link className={classes.linkColorDrawer} to="/">
+        <List className={classes.itemBoxDrawer}>
           <ListItem button>
             <ListItemIcon>
               {<AirplaneTicketIcon className={classes.iconDrawer} />}
             </ListItemIcon>
             {'Bilete avion'}
           </ListItem>
-        </Link>
-      </List>
-      <List className={classes.itemBoxDrawer}>
-        <Link className={classes.linkColorDrawer} to="/cazari">
+        </List>
+      </Link>
+      <Link className={classes.linkColorDrawer} to="/cazari">
+        <List className={classes.itemBoxDrawer}>
           <ListItem button>
             <ListItemIcon>
               {<LocalHotelIcon className={classes.iconDrawer} />}
             </ListItemIcon>
             {'Cazări'}
           </ListItem>
-        </Link>
-      </List>
-      <List className={classes.itemBoxDrawer}>
-        <Link className={classes.linkColorDrawer} to="/masini">
+        </List>
+      </Link>
+      <Link className={classes.linkColorDrawer} to="/masini">
+        <List className={classes.itemBoxDrawer}>
           <ListItem button>
             <ListItemIcon>
               <DirectionsCarTwoToneIcon className={classes.iconDrawer} />
             </ListItemIcon>
             {'Mașini'}
           </ListItem>
-        </Link>
-      </List>
+        </List>
+      </Link>
       <Divider variant="middle" className={classes.iconDivider} />
-      <List className={classes.itemBoxDrawer}>
-        <Link className={classes.linkColorDrawer} to="/explore">
+      <Link className={classes.linkColorDrawer} to="/explore">
+        <List className={classes.itemBoxDrawer}>
           <ListItem button>
             <ListItemIcon>
               {<PublicSharpIcon className={classes.iconDrawer} />}
             </ListItemIcon>
             {'Explore'}
           </ListItem>
-        </Link>
-      </List>
+        </List>
+      </Link>
       <Divider variant="middle" className={classes.iconDivider} />
-      <List className={classes.itemBoxDrawer}>
-        <Link className={classes.linkColorDrawer} to="/trips">
+      <Link className={classes.linkColorDrawer} to="/trips">
+        <List className={classes.itemBoxDrawer}>
           <ListItem button>
             <ListItemIcon color="primary">
               {<HolidayVillageSharpIcon className={classes.iconDrawer} />}
             </ListItemIcon>
             {'Trips'}
           </ListItem>
-        </Link>
-      </List>
+        </List>
+      </Link>
     </Drawer>
   )
 }
