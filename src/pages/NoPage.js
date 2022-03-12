@@ -1,4 +1,6 @@
 import React from 'react'
+
+// Images
 import error404 from '../images/404.jpg'
 
 const NoPage = () => {

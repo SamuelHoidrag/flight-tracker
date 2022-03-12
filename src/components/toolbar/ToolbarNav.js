@@ -1,13 +1,19 @@
 import React from 'react'
-import CountryPicker from '../countryPicker/CountryPicker'
-import ConnectModal from '../modalConnect/ConnectModal'
+
+// Images
+import Logo from '../../images/logo.png'
+
+// Material Ui
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Link from '@mui/material/Link'
-import Logo from '../../images/logo.png'
+
+// Components
+import CountryPicker from '../countryPicker/CountryPicker'
 import { useStyles } from '../../style'
+import ConnectModal from '../modalConnect/ConnectModal'
 
 const ToolbarNav = (props) => {
   const classes = useStyles()
