@@ -48,7 +48,7 @@ const ChildModal = () => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <Button id="insertEmailAuth" onClick={handleOpen}>
         Continuă cu Emailul
       </Button>
@@ -75,7 +75,7 @@ const ChildModal = () => {
           </Button>
         </Box>
       </Modal>
-    </React.Fragment>
+    </>
   )
 }
 
