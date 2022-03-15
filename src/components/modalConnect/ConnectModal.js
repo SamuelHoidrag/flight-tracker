@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { memo } from 'react'
 
 // Images
 import Logo from '../../images/logo.png'
@@ -23,6 +23,7 @@ import ChildModal from './ChildModalAuth'
 import { useStyles } from '../../style'
 
 const ConnectModal = () => {
+  console.log('Connect Modal Is Rendering')
   const classes = useStyles()
 
   const [open, setOpen] = React.useState(false)
@@ -105,4 +106,4 @@ const ConnectModal = () => {
   )
 }
 
-export default ConnectModal
+export default memo(ConnectModal)

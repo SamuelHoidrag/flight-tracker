@@ -29,78 +29,80 @@ const DrawerMenu = (props) => {
   const { handleDrawerClose, open } = props
 
   return (
-    <Drawer variant="permanent" open={open}>
-      <DrawerHeader className={classes.drawerHeader}>
-        <IconButton onClick={handleDrawerClose}>
-          {theme.direction === 'rtl' ? (
-            <ChevronRightIcon />
-          ) : (
-            <ChevronLeftIcon className={classes.iconDrawer} />
-          )}
-        </IconButton>
-      </DrawerHeader>
-      <List className={classes.itemBoxDrawer}>
-        <ListItem button>
-          <ListItemIcon>
-            {<PersonPinTwoToneIcon className={classes.iconDrawer} />}
-          </ListItemIcon>
-          <ListItemText primary={'Conectare'} />
-        </ListItem>
-      </List>
-      <Divider variant="middle" className={classes.iconDivider} />
-      <Link className={classes.linkColorDrawer} to="/">
+    <div>
+      <Drawer variant="permanent" open={open}>
+        <DrawerHeader className={classes.drawerHeader}>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === 'rtl' ? (
+              <ChevronRightIcon />
+            ) : (
+              <ChevronLeftIcon className={classes.iconDrawer} />
+            )}
+          </IconButton>
+        </DrawerHeader>
         <List className={classes.itemBoxDrawer}>
           <ListItem button>
             <ListItemIcon>
-              {<AirplaneTicketIcon className={classes.iconDrawer} />}
+              {<PersonPinTwoToneIcon className={classes.iconDrawer} />}
             </ListItemIcon>
-            {'Bilete avion'}
+            <ListItemText primary={'Conectare'} />
           </ListItem>
         </List>
-      </Link>
-      <Link className={classes.linkColorDrawer} to="/cazari">
-        <List className={classes.itemBoxDrawer}>
-          <ListItem button>
-            <ListItemIcon>
-              {<LocalHotelIcon className={classes.iconDrawer} />}
-            </ListItemIcon>
-            {'Cazări'}
-          </ListItem>
-        </List>
-      </Link>
-      <Link className={classes.linkColorDrawer} to="/masini">
-        <List className={classes.itemBoxDrawer}>
-          <ListItem button>
-            <ListItemIcon>
-              <DirectionsCarTwoToneIcon className={classes.iconDrawer} />
-            </ListItemIcon>
-            {'Mașini'}
-          </ListItem>
-        </List>
-      </Link>
-      <Divider variant="middle" className={classes.iconDivider} />
-      <Link className={classes.linkColorDrawer} to="/explore">
-        <List className={classes.itemBoxDrawer}>
-          <ListItem button>
-            <ListItemIcon>
-              {<PublicSharpIcon className={classes.iconDrawer} />}
-            </ListItemIcon>
-            {'Explore'}
-          </ListItem>
-        </List>
-      </Link>
-      <Divider variant="middle" className={classes.iconDivider} />
-      <Link className={classes.linkColorDrawer} to="/trips">
-        <List className={classes.itemBoxDrawer}>
-          <ListItem button>
-            <ListItemIcon color="primary">
-              {<HolidayVillageSharpIcon className={classes.iconDrawer} />}
-            </ListItemIcon>
-            {'Trips'}
-          </ListItem>
-        </List>
-      </Link>
-    </Drawer>
+        <Divider variant="middle" className={classes.iconDivider} />
+        <Link className={classes.linkColorDrawer} to="/">
+          <List className={classes.itemBoxDrawer}>
+            <ListItem button>
+              <ListItemIcon>
+                {<AirplaneTicketIcon className={classes.iconDrawer} />}
+              </ListItemIcon>
+              {'Bilete avion'}
+            </ListItem>
+          </List>
+        </Link>
+        <Link className={classes.linkColorDrawer} to="/cazari">
+          <List className={classes.itemBoxDrawer}>
+            <ListItem button>
+              <ListItemIcon>
+                {<LocalHotelIcon className={classes.iconDrawer} />}
+              </ListItemIcon>
+              {'Cazări'}
+            </ListItem>
+          </List>
+        </Link>
+        <Link className={classes.linkColorDrawer} to="/masini">
+          <List className={classes.itemBoxDrawer}>
+            <ListItem button>
+              <ListItemIcon>
+                <DirectionsCarTwoToneIcon className={classes.iconDrawer} />
+              </ListItemIcon>
+              {'Mașini'}
+            </ListItem>
+          </List>
+        </Link>
+        <Divider variant="middle" className={classes.iconDivider} />
+        <Link className={classes.linkColorDrawer} to="/explore">
+          <List className={classes.itemBoxDrawer}>
+            <ListItem button>
+              <ListItemIcon>
+                {<PublicSharpIcon className={classes.iconDrawer} />}
+              </ListItemIcon>
+              {'Explore'}
+            </ListItem>
+          </List>
+        </Link>
+        <Divider variant="middle" className={classes.iconDivider} />
+        <Link className={classes.linkColorDrawer} to="/trips">
+          <List className={classes.itemBoxDrawer}>
+            <ListItem button>
+              <ListItemIcon color="primary">
+                {<HolidayVillageSharpIcon className={classes.iconDrawer} />}
+              </ListItemIcon>
+              {'Trips'}
+            </ListItem>
+          </List>
+        </Link>
+      </Drawer>
+    </div>
   )
 }
 

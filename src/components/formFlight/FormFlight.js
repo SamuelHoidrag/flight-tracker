@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import React, { useState } from 'react'
 
 //Materiall UI
 import { Container, Box } from '@mui/material'
@@ -14,7 +14,7 @@ import Results from '../results/Results'
 
 const { Option } = Select
 
-export default memo(function FormFlight() {
+const FormFlight = () => {
   const [carrier, setCarrier] = useState('')
   const [date, setDate] = useState('')
   const [flightNum, setFlightNum] = useState('')
@@ -123,4 +123,6 @@ export default memo(function FormFlight() {
       </Container>
     </Box>
   )
-})
+}
+
+export default FormFlight
