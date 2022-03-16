@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
-
 //Materiall UI
 import { Container, Box } from '@mui/material'
 import Typography from '@mui/material/Typography'
-
 // Ant Design
 import { Select, Button, InputNumber, DatePicker, Space } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
-
 // Components
 import { useStyles } from '../../style'
 import Results from '../results/Results'

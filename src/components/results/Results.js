@@ -1,6 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
-
 // Components
 import Unknown from '../results/Unknown'
 import Active from '../results/Active'

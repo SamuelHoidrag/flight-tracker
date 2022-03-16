@@ -1,6 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
-
 // Web Components
 import moment from 'moment'
 

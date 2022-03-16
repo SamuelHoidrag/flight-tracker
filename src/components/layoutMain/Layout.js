@@ -1,8 +1,6 @@
 import React from 'react'
-
 // Material Ui
 import { Box } from '@mui/system'
-
 // Components
 import { useStyles, AppBar } from '../../style'
 import ToolbarNav from '../toolbar/ToolbarNav'
