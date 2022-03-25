@@ -6,13 +6,26 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
-import Link from '@mui/material/Link'
+import Button from '@mui/material/Button'
+import LogoutIcon from '@mui/icons-material/Logout'
 // Components
 import CountryPicker from '../countryPicker/CountryPicker'
 import { useStyles } from '../../style'
 import ConnectModal from '../modalConnect/ConnectModal'
 
+import { auth } from '../configFirebase/firebase'
+import { useState, useEffect } from 'react'
+import firebase from '../configFirebase/firebase'
+
 const ToolbarNav = (props) => {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      setUser(user)
+    })
+  }, [])
+
   const classes = useStyles()
 
   const { handleDrawerOpen, open } = props
@@ -32,11 +45,24 @@ const ToolbarNav = (props) => {
         </IconButton>
         <Typography className={classes.logoAlign} component="div">
           <img className="momondoLogo" src={Logo} alt="Logo Momondo" />
-        </Typography>
-        <Link className={classes.linkTrips} href="#" underline="none">
-          {'Trips'}
-        </Link>
-        <ConnectModal />
+        </Typography>{' '}
+        {user ? (
+          <div className="loginInfo">
+            <h1 className="nameLogin">
+              Bună, <span></span>
+              {user.displayName}
+            </h1>
+            <Button
+              onClick={() => auth.signOut()}
+              className={classes.connectModal}
+            >
+              <LogoutIcon className={classes.buttonConnect} />
+              Sign out
+            </Button>
+          </div>
+        ) : (
+          <ConnectModal />
+        )}
         <CountryPicker />
       </Toolbar>
     </>

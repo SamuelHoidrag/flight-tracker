@@ -21,9 +21,9 @@ import CloseIcon from '@mui/icons-material/Close'
 // Components
 import ChildModal from './ChildModalAuth'
 import { useStyles } from '../../style'
+import { signInWithGoogle } from '../configFirebase/firebase'
 
 const ConnectModal = () => {
-  console.log('Connect Modal Is Rendering')
   const classes = useStyles()
 
   const [open, setOpen] = React.useState(false)
@@ -84,6 +84,7 @@ const ConnectModal = () => {
               className={classes.buttonGoogle}
               variant="outlined"
               startIcon={<GoogleIcon />}
+              onClick={signInWithGoogle}
             >
               Google
             </Button>

@@ -17,6 +17,7 @@
     "axios": "^0.24.0",
     "cors": "^2.8.5",
     "country-dropdown-with-flags-for-react": "^1.1.4",
+    "firebase": "^9.6.9",
     "memo": "^1.0.1",
     "moment": "^2.29.1",
     "prettier": "^2.5.1",

@@ -295,3 +295,15 @@ select::-ms-expand {
   background-color: #21033a;
   color: #8b8282;
 }
+
+.loginInfo {
+  display: flex;
+  gap: 15px;
+}
+
+.nameLogin {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 9px;
+}
