@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import React, { useState } from 'react'
 // Material Ui
 import TextField from '@mui/material/TextField'
 import Modal from '@mui/material/Modal'
@@ -23,7 +23,6 @@ const style = {
 }
 
 const ChildModal = () => {
-  console.log('Connect Modal CHILD Is Rendering')
   const [open, setOpen] = React.useState(false)
 
   const [emailError, setEmailError] = useState('')
@@ -78,4 +77,4 @@ const ChildModal = () => {
   )
 }
 
-export default memo(ChildModal)
+export default ChildModal

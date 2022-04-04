@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 // Images
 import Logo from '../../images/logo.png'
+// Style
+import { useStyles } from '../../style'
 // Material Ui
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
@@ -10,11 +12,9 @@ import Button from '@mui/material/Button'
 import LogoutIcon from '@mui/icons-material/Logout'
 // Components
 import CountryPicker from '../countryPicker/CountryPicker'
-import { useStyles } from '../../style'
 import ConnectModal from '../modalConnect/ConnectModal'
-
+// Firebase
 import { auth } from '../configFirebase/firebase'
-import { useState, useEffect } from 'react'
 import firebase from '../configFirebase/firebase'
 
 const ToolbarNav = (props) => {

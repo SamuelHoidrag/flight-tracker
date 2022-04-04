@@ -8,6 +8,10 @@ import { SearchOutlined } from '@ant-design/icons'
 // Components
 import { useStyles } from '../../style'
 import Results from '../results/Results'
+import Footer from '../footer/Footer'
+import TravelAdvice from '../travelAdvice/TravelAdvice'
+import VacantionHouses from '../vacantionHouses/VacantionHouses'
+import PopulatedCity from '../populatedCity/PopulatedCity'
 
 const { Option } = Select
 
@@ -45,7 +49,7 @@ const FormFlight = () => {
         method: 'GET',
         headers: {
           appId: 'a7de6f15',
-          appKey: '0a52b5dcdfd800e78d224c515c935074',
+          appKey: '4ca7971077cb6836d3820cc574cc183c',
         },
       }
     )
@@ -117,7 +121,11 @@ const FormFlight = () => {
             </div>
           )}
         </div>
+        <TravelAdvice />
+        <PopulatedCity />
+        <VacantionHouses />
       </Container>
+      <Footer />
     </Box>
   )
 }

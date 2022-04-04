@@ -1,21 +1,32 @@
 import React from 'react'
 // Material Ui
-import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
 import Typography from '@mui/material/Typography'
+import { Container, Box } from '@mui/material'
+//Components
 import Layout from '../components/layoutMain/Layout'
+import TravelAdvice from '../components/travelAdvice/TravelAdvice'
+import VacantionHouses from '../components/vacantionHouses/VacantionHouses'
+import Footer from '../components/footer/Footer'
+import PopulatedCity from '../components/populatedCity/PopulatedCity'
 
 const Cazari = () => {
   return (
-    <Box>
-      <CssBaseline />
-      <Layout />
-      <Box className="mainContainerCazari" component="main">
-        <Typography className="titleCazare" variant="h4">
-          Rezervă o cazare cu anulare gratuită. Caută acum!
-        </Typography>
-      </Box>
-    </Box>
+    <div className="hotelsComponent">
+      <Container>
+        <CssBaseline />
+        <Layout />
+        <Box className="mainContainerCazari" component="main">
+          <Typography className="titleCazare" variant="h4">
+            Rezervă o cazare cu anulare gratuită. Caută acum!
+          </Typography>
+          <TravelAdvice />
+          <PopulatedCity />
+          <VacantionHouses />
+        </Box>
+      </Container>
+      <Footer />
+    </div>
   )
 }
 

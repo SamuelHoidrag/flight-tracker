@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 
 // Images
 import Logo from '../../images/logo.png'
@@ -107,4 +107,4 @@ const ConnectModal = () => {
   )
 }
 
-export default memo(ConnectModal)
+export default ConnectModal
