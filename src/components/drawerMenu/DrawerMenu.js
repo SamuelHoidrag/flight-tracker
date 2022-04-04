@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
-
 // Material UI
 import List from '@mui/material/List'
 import PersonPinTwoToneIcon from '@mui/icons-material/PersonPinTwoTone'
@@ -17,7 +16,6 @@ import ListItemText from '@mui/material/ListItemText'
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket'
 import LocalHotelIcon from '@mui/icons-material/LocalHotel'
 import HolidayVillageSharpIcon from '@mui/icons-material/HolidayVillageSharp'
-
 //Components
 import { useStyles, Drawer, DrawerHeader } from '../../style'
 
