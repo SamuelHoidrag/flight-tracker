@@ -1,9 +1,7 @@
 import React from 'react'
-
 // Images
 import Logo from '../../images/logo.png'
 import LogoAuth from '../../images/magiclinkloginBg.svg'
-
 // Material Ui
 import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
@@ -17,7 +15,6 @@ import GoogleIcon from '@mui/icons-material/Google'
 import AppleIcon from '@mui/icons-material/Apple'
 import { Link } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
-
 // Components
 import ChildModal from './ChildModalAuth'
 import { useStyles } from '../../style'

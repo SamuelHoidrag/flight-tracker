@@ -20,6 +20,7 @@ const PopulatedCity = () => {
   useEffect(() => {
     getData()
   }, [])
+
   return (
     <div>
       <div className="populatedCityBox">

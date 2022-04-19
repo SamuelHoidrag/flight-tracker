@@ -351,12 +351,6 @@ select::-ms-expand {
   font-weight: 500;
 }
 
-.hotelsComponent {
-  height: auto;
-  width: 100%;
-  background-color: #21033a;
-}
-
 .populatedCityHotels {
   padding-top: 50px;
   font-family: Roboto;

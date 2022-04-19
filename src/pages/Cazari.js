@@ -12,7 +12,7 @@ import PopulatedCity from '../components/populatedCity/PopulatedCity'
 
 const Cazari = () => {
   return (
-    <div className="hotelsComponent">
+    <Box className="mainContainer">
       <Container>
         <CssBaseline />
         <Layout />
@@ -26,7 +26,7 @@ const Cazari = () => {
         </Box>
       </Container>
       <Footer />
-    </div>
+    </Box>
   )
 }
 

@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 // Material UI
 import List from '@mui/material/List'
-import PersonPinTwoToneIcon from '@mui/icons-material/PersonPinTwoTone'
 import PublicSharpIcon from '@mui/icons-material/PublicSharp'
 import DirectionsCarTwoToneIcon from '@mui/icons-material/DirectionsCarTwoTone'
 import { useTheme } from '@mui/material/styles'
@@ -12,7 +11,6 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import ListItem from '@mui/material/ListItem'
 import ListItemIcon from '@mui/material/ListItemIcon'
-import ListItemText from '@mui/material/ListItemText'
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket'
 import LocalHotelIcon from '@mui/icons-material/LocalHotel'
 import HolidayVillageSharpIcon from '@mui/icons-material/HolidayVillageSharp'
@@ -38,15 +36,6 @@ const DrawerMenu = (props) => {
             )}
           </IconButton>
         </DrawerHeader>
-        <List className={classes.itemBoxDrawer}>
-          <ListItem button>
-            <ListItemIcon>
-              {<PersonPinTwoToneIcon className={classes.iconDrawer} />}
-            </ListItemIcon>
-            <ListItemText primary={'Conectare'} />
-          </ListItem>
-        </List>
-        <Divider variant="middle" className={classes.iconDivider} />
         <Link className={classes.linkColorDrawer} to="/">
           <List className={classes.itemBoxDrawer}>
             <ListItem button>
